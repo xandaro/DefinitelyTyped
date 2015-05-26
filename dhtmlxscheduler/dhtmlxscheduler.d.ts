@@ -1029,6 +1029,16 @@ interface SchedulerStatic{
 	version: String;
 	xy: SchedulerSizes;
 	locale: SchedulerLocale;
+	
+	/**
+	 * unit view properties
+	*/
+	_props: any;
+
+	/**
+	 * callback for the minical button
+	*/
+	__show_minical(): void;
 
 	/**
 	 * adds a new event
@@ -1153,6 +1163,11 @@ interface SchedulerStatic{
 	 * @param config the configuration object of the Units view
 	*/
 	createUnitsView(config: any);
+	
+	/**
+	 * processor that monitors data changes and gets the server requests on the client side
+	*/
+	dataProcessor: any;
 
 	/**
 	 * deletes all sections from  the currently active view (if the opened view isn't Timeline in the 'Tree' mode - the method will be ignored)
@@ -1597,6 +1612,11 @@ interface SchedulerStatic{
 	 * @param view the view name
 	*/
 	updateView(date: Date, view: string);
+	
+	/**
+	 * refresh the current view
+	*/
+	updateView();
 }
 
 
