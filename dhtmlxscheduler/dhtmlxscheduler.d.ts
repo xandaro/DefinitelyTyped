@@ -1164,6 +1164,11 @@ interface SchedulerStatic{
 	 * @param id the event id
 	*/
 	deleteEvent(id: any);
+	
+	/**
+	 * removes all marking/blocking set by the addMarkedTimespan() and blockTime() methods
+	*/
+	deleteMarkedTimespan();
 
 	/**
 	 * removes marking/blocking set by the addMarkedTimespan() and blockTime() methods
